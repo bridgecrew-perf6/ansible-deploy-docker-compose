@@ -3,12 +3,14 @@
   copy:
     src: docker-compose.yaml
     dest: /home/hossam/docker-compose.yaml
+    
   - name: Dockerlogin
-  docker_login:
-    registry_url: https://index.docker.io/v1
-    username: hossam1radwan
-    password: "{{docker_password}}"
-  - name: Start container from compose
+    docker_login:
+      registry_url: https://index.docker.io/v1
+      username: hossam1radwan
+      password: "{{docker_password}}"
+    
+- name: Start container from compose
   docker_compose: 
     project_src: /home/hossam
     state: present # docker-compose up
