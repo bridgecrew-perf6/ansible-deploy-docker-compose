@@ -32,7 +32,7 @@
   hosts: aws
   become: yes
   vars:
-    groups: adm,docker
+    user_groups: adm,docker
   roles:
     - create_user
     
