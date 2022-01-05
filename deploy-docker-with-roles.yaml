@@ -31,6 +31,8 @@
 - name: Create new linux user
   hosts: aws
   become: yes
+  vars:
+    groups: adm,docker
   roles:
     - create_user
     
