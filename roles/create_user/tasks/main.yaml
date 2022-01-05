@@ -1,4 +1,4 @@
 - name: Create new linux user
   user:
     name: hossam
-    groups: "{{groups}}"
+    groups: "{{user_groups}}"
